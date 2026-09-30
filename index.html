@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Caderno Livre — estudos para o ENEM, sem conta e com progresso salvo no navegador." />
+  <meta name="theme-color" content="#111827" />
+  <title>Caderno Livre — ENEM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#/" aria-label="Caderno Livre — início">
+        <span class="brand-mark">CL</span>
+        <span><strong>Caderno Livre</strong><small>ENEM sem conta</small></span>
+      </a>
+      <nav class="nav-main" aria-label="Navegação principal">
+        <button class="nav-link active" data-route="home"><span>⌂</span> Início</button>
+        <button class="nav-link" data-route="subjects"><span>▤</span> Matérias</button>
+        <button class="nav-link" data-route="favorites"><span>☆</span> Favoritos</button>
+      </nav>
+      <div class="sidebar-section">
+        <p>Áreas do ENEM</p>
+        <div id="areaNav"></div>
+      </div>
+      <div class="sidebar-footer">
+        <div class="offline-pill"><span></span> Seu progresso fica neste navegador</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn mobile-only" aria-label="Abrir menu">☰</button>
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="searchInput" type="search" placeholder="Buscar assunto, conceito ou palavra…" autocomplete="off" />
+          <kbd>/</kbd>
+        </div>
+        <div class="top-actions">
+          <button id="resetBtn" class="ghost-btn" title="Apagar o progresso salvo">Zerar progresso</button>
+        </div>
+      </header>
+      <div id="view" class="view" tabindex="-1"></div>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="data/matematica.js"></script>
+  <script src="data/portugues.js"></script>
+  <script src="data/artes.js"></script>
+  <script src="data/educacao-fisica.js"></script>
+  <script src="data/historia.js"></script>
+  <script src="data/geografia.js"></script>
+  <script src="data/filosofia.js"></script>
+  <script src="data/sociologia.js"></script>
+  <script src="data/biologia.js"></script>
+  <script src="data/fisica.js"></script>
+  <script src="data/quimica.js"></script>
+  <script>window.CADERNO_DATA = { subjects: window.CADERNO_SUBJECTS || [] };</script>
+  <script src="app.js"></script>
+</body>
+</html>
